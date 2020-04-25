@@ -219,14 +219,7 @@ export default {
       }
     },
     deregister (field) {
-      console.log(field)
-      console.log(this.registry[field])
-      console.log(this.internalModelProxy[field])
-      console.log(this.namedFieldErrors[field])
-
       delete this.registry[field]
-      delete this.internalModelProxy[field]
-      delete this.namedFieldErrors[field]
     },
     registerErrorComponent (component) {
       if (!this.errorComponents.includes(component)) {
