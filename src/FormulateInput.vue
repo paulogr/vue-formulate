@@ -250,7 +250,7 @@ export default {
     this.updateLocalAttributes(this.$attrs)
     this.performValidation()
   },
-  destroyed () {
+  beforeDestroy () {
     if (this.formulateFormDeregister && typeof this.formulateFormDeregister === 'function') {
       this.formulateFormDeregister(this.nameOrFallback)
     }
