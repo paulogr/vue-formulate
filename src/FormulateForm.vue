@@ -220,6 +220,8 @@ export default {
     },
     deregister (field) {
       delete this.registry[field]
+      delete this.internalModelProxy[field]
+      delete this.namedFieldErrors[field]
     },
     registerErrorComponent (component) {
       if (!this.errorComponents.includes(component)) {
